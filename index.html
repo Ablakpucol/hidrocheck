@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidrocheck</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mennyire vagy hidratált?</h1>
+    <p>Mennyi folyadékot ittál ma? (Hány decit küldtél le csajszi?)</p>
+    <input type="number" id="fluidInput" placeholder="Add meg a mennyiséget">
+    <button onclick="checkFluidIntake()">Ellenőrzés</button>
+    <p id="result"></p>
+
+    <script>
+        function checkFluidIntake() {
+            const input = document.getElementById('fluidInput').value;
+            const result = document.getElementById('result');
+            const intake = parseFloat(input);
+
+            if (isNaN(intake) || intake <= 0) {
+                result.textContent = "Kérlek, adj meg egy érvényes számot!";
+                result.style.color = "red";
+            } else if (intake < 15) {
+                result.textContent = "Kitti....  Igyál még, nem elég!;
+                result.style.color = "orange";
+            } else if (intake >= 15 && intake < 30) {
+                result.textContent = "Ügyes vagy, kaphatsz egy puszit kedden! ;);
+                result.style.color = "green";
+            } else {
+                result.textContent = "Ne legyél már csicska, ezt tudod ki hiszi el...! XD ";
+                result.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
