@@ -44,13 +44,13 @@
                 result.textContent = "Kérlek, adj meg egy érvényes számot!";
                 result.style.color = "red";
             } else if (intake < 15) {
-                result.textContent = "Kitti....Igyál még, nem elég.";
+                result.textContent = "Kitti....  Igyál még, nem elég!;
                 result.style.color = "orange";
             } else if (intake >= 15 && intake < 30) {
-                result.textContent = "Ügyes vagy, kapsz egy puszit kedden!";
+                result.textContent = "Ügyes vagy, kaphatsz egy puszit kedden! ;);
                 result.style.color = "green";
             } else {
-                result.textContent = "Ne legyél már csicska! :P ";
+                result.textContent = "Ne legyél már csicska, ezt tudod ki hiszi el...! XD ";
                 result.style.color = "red";
             }
         }
